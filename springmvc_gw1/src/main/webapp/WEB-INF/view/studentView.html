@@ -1,0 +1,16 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>test</title>
+</head>
+<body>
+<span th:text="#{name}"/>:<span th:text="${student.name}"/> <br/>
+<span th:if="${hideScore != 'yes'}">
+    <span th:text="#{score}"/>:<span th:text="${student.score}"/><br/>
+</span>
+<span th:text="#{email}"/>:<span th:text="${student.email}"/><br/>
+<span th:text="#{comment}"/>:<span th:text="${student.comment}"/><br/>
+<br/>
+<a th:href="@{/student/{studentID}/modify(studentID=${student.id})}"><span th:text="#{infoModify}"/></a><br/>
+</body>
+</html>

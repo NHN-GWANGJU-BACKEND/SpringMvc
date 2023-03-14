@@ -1,0 +1,17 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<form method="post" th:action="@{/student/{studentID}/modify(studentID=${student.id})}">
+    <span th:text="#{name}"/>: <input type="text" name="name" th:value="${student.name}"/><br/>
+    <span th:text="#{email}"/>: <input type="text" name="email" th:value="${student.email}"/><br/>
+    <span th:text="#{score}"/>: <input type="text" name="score" th:value="${student.score}"/><br/>
+    <span th:text="#{comment}"/>: <textarea name="comment" rows="10" cols="80"
+                                              th:text="${student.comment}"></textarea><br/>
+    <br/>
+    <input type="submit"/>
+</form>
+
+</body>
+</html>
